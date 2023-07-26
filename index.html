@@ -316,7 +316,7 @@
                           </div>
                           <div>
                             <h2 class="mt-0 mb-2"><a v-bind:href="'#/blog/' + item.blogFile">{{ item.name }}</a></h2>
-                            <div class="meta mb-3">Posted on <a href="#">{{ item.name }}</a></div>
+                            <div class="meta mb-3">Posted on <a href="#">{{ item.date }}</a></div>
                             <p>{{item.abs}}</p>
                             Tags:  
                             <span v-for="(tag, index) in item.tags">
