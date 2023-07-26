@@ -28,7 +28,7 @@ The pipeline used for tuning the model can generally be divided into three stage
 
 Considering this training pipeline, a few  observations become apparent. First and foremost, the reinforcement model has no access to "ground truth" information. Therefore, the observed performance improvements between chatGPT and GPT-3 are likely due to stylistic alignment with user expectations rather than changes in the content of the answers.  This is further supported by an increase in hallucinations between the fine-tuned (SFT) and PPO-tuned model.  The overall drop in hallucination between the baseline GPT-3 and all other models can perhaps be attributed to the addition of the instruction "if you do not know, say *I don't know*" to the prompts. This is further inforced when breaking down answers to either truthful or truthful and informative.
 
-<img src="./Blog/BlogFiles/June2023_LLM/instructGPT_truthfulness.png" src="width:30%;"></img>
+<img src="./Blog/BlogFiles/June2023_LLM/instructGPT_truthfulness.png" style="width:30%;"></img>
 <p class="text-sm-center" style="margin:0em 8em 1em; font-size:0.8em;">Taken from <a href="https://arxiv.org/pdf/2203.02155">instructGPT</a>. Grey bars indicate truthfulness, colored bard indicate truthfulness and informativeness (percentage). Tuned models were more truthful, but not neceserarly more informative.</p>
 
 In conclusion, while ChatGPT achieved widespread notoriety and propelled openAI into a house-hold name status. The main improvements upon GPT-3 were mostly achieved by **fine-tuning for stylistic alignment rather than the core technology** behind these models. This is especially interesting considering [self-instruct](https://arxiv.org/abs/2212.10560) achieved similar performance despite doing away with all stages in the instructGPT pipeline except for the very first.
@@ -47,7 +47,7 @@ In total the authors estimate that training the LLaMa model released 1015 tons o
 
 Two week after the the weights of LLaMA were released, researchers from stanford released Alpaca, a model that used  [self-instruct](https://arxiv.org/abs/2212.10560) to fine tune the weights. A week after that Vicuna which fine tuned the weights further was released. A [leaked document from Google](https://www.semianalysis.com/p/google-we-have-no-moat-and-neither) seems to suggest that these open source model are viewed as serious competitors of both Google and OpenAI models. Indeed, with the recent release of the Guanaco model (fined tuned Alpaca LLM, the fine tuning QLoRA method requires only 24 hours training on a single 48GB GPU) it seems as if open source LLMs are now indistinguishable from chatGPT performance wise. 
 
-<img src="./Blog/BlogFiles/June2023_LLM/openLLMs.png" src="width:30%;"></img>
+<img src="./Blog/BlogFiles/June2023_LLM/openLLMs.png" style="width:70%;"></img>
 <p class="text-sm-center" style="margin:0em 8em 1em; font-size:0.8em;">From a leaked Google document titled "we have no moat, and neither does OpenAI".</p>
 
 ## What are the limits of LLMs?
@@ -66,12 +66,12 @@ First and foremost, it has been observed that certain approaches that require La
 
 Secondly, while LLMs are undeniably powerful tools, their true potential shines brightest in scenarios characterized by limited data, noise, and tasks that lack well-defined formalization. However, in other circumstances, specialized deep learning models trained for specific and narrow tasks continue to outperform LLMs.
 
-<img src="./Blog/BlogFiles/June2023_LLM/decisionTree.png" src="width:30%;"></img>
+<img src="./Blog/BlogFiles/June2023_LLM/decisionTree.png" style="width:70%;"></img>
 <p class="text-sm-center" style="margin:0em 8em 1em; font-size:0.8em;">When should one use LLMs? From  <a href="https://github.com/Mooler0410/LLMsPracticalGuide">(Yang et al 2023).</a></p>
 
 One interesting option is combining the best of both worlds by defining the specialized models as tools that the LLM can invoke when necessary. [HuggingGPT](https://huggingface.co/spaces/microsoft/HuggingGPT) and [Gorrilla](https://gorilla.cs.berkeley.edu/) demonstrate how useful these tools can be for completing complex multi-modal tasks. Access to search engines can help alleviate  
   
-<img src="./Blog/BlogFiles/June2023_LLM/HuggingGPT.png" src="width:30%;"></img>
+<img src="./Blog/BlogFiles/June2023_LLM/HuggingGPT.png" style="width:70%;"></img>
 <p class="text-sm-center" style="margin:0em 8em 1em; font-size:0.8em;"> Integrating the 53 most popular huggingFace APIs into ChatGPT. From  <a href="https://huggingface.co/spaces/microsoft/HuggingGPT">HuggingGPT</a>.</p>
 
 ## Final Musings
