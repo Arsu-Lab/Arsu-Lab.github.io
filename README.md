@@ -1,2 +1,2 @@
-# [Arsu-Lab.github.io](Arsu-Lab.github.io)
+# [Arsu-Lab.github.io](http://Arsu-Lab.github.io)
 Blog website!
