@@ -58,7 +58,7 @@
       blogNav.blogSelected = blogFile
       blogNav.content = './Blog/BlogFiles/'+blogFile
       blogNav.mdText  = ''
-      if (blogNav.content != '') {
+      if (blogNav.blogSelected != '') {
         blogContent()
       }
     }
@@ -78,9 +78,16 @@
       console.log("viewBook: bookId is populated: " + blogId);
       selectBlog(blogId+'.md');
     };
+    var backToMain = function () {
+      console.log('at backToMain')
+      selectBlog('');
+    };
 
     var routes = {
-      '/blog/:blogId': viewBlog
+      '/blog/:blogId': viewBlog,
+      'section-about': backToMain,
+      'section-blog': backToMain,
+      'section-contact': backToMain
     };
 
     var router = Router(routes);
@@ -110,7 +117,7 @@
     }).mount('#mainPage')
 
   </script>
-  <div id="mainPage" class="site-wrap">
+  <div class="site-wrap">
 
     <div class="site-mobile-menu site-navbar-target">
       <div class="site-mobile-menu-header">
@@ -143,19 +150,18 @@
           <li><a href="#section-photos" class="nav-link">Photos</a></li>
           <li><a href="#section-testimonial" class="nav-link">Testimonial</a></li>
           -->
-          <li><a href="index.html#section-about" @click="selectBlog('')" class="nav-link">About</a></li>
-          <li><a href="index.html#section-blog" @click="selectBlog('')" class="nav-link" >Blog</a></li>
-          <li><a href="index.html#section-contact" @click="selectBlog('')" class="nav-link">Contact</a></li>
+          <li><a href="#section-about" class="nav-link">About</a></li>
+          <li><a href="#section-blog" class="nav-link" >Blog</a></li>
+          <li><a href="#section-contact" class="nav-link">Contact</a></li>
         </ul>
         <ul class="social js-clone-nav">
           <li><a href="https://github.com/Arsu-Lab"><span class="icon-github"></span></a></li>
-          <li><a href="#"><span class="icon-facebook"></span></a></li>
-          <li><a href="#"><span class="icon-twitter"></span></a></li>
+          <li><a href="https://calendly.com/sari-sadiya/30min"><span class="icon-calendar"></span></a></li>
           <li><a href="#"><span class="icon-linkedin"></span></a></li>
         </ul>
       </div>
     </header> 
-    <main class="main-content" data-content="main">
+    <main id="mainPage" class="main-content" data-content="main">
 
       <!-- section home
       <section class="site-section-hero bg-image mb-5" style="background-image: url('images/hero-min.jpg');"  data-stellar-background-ratio="0.5" id="section-home">
@@ -322,7 +328,8 @@
                       <!--- print blog entry --->
                     </div>
                   </div>
-
+                  <!--
+                  for pagination  https://codepen.io/tedirghazali/details/qBjbyEB
                   <div class="col-12 text-center">
                     <div class="custom-pagination">
                       <span>1</span>
@@ -332,6 +339,7 @@
                       <a href="#">7</a>
                     </div>
                   </div>
+                  -->
                 </div>
               </div>
             </div>
@@ -344,41 +352,28 @@
               <div class="col-md-12">
                 <h2 class=" mb-5 heading">Contact</h2>
 
-                <form action="#">
+                <form action="https://getform.io/f/e7904191-fc83-4e29-bf7c-3af8bc04848c" method="POST">
 
 
 
                   <div class="row form-group">
                     <div class="col-md-6 mb-3 mb-md-0">
-                      <label class="" for="fname">First Name</label>
-                      <input type="text" id="fname" class="form-control">
+                      <label class="">First and Last Name</label>
+                      <input type="text" id="name" class="form-control">
                     </div>
-                    <div class="col-md-6">
-                      <label class="" for="lname">Last Name</label>
-                      <input type="text" id="lname" class="form-control">
-                    </div>
-                  </div>
 
-                  <div class="row form-group">
-
-                    <div class="col-md-12">
-                      <label class="" for="email">Email</label> 
+                    <div class="col-md-6 mb-3 mb-md-0">
+                      <label class="">Email</label> 
                       <input type="email" id="email" class="form-control">
                     </div>
                   </div>
 
-                  <div class="row form-group">
-
-                    <div class="col-md-12">
-                      <label class="" for="subject">Subject</label> 
-                      <input type="subject" id="subject" class="form-control">
-                    </div>
-                  </div>
+                  <input type="hidden" name="_gotcha" style="display:none !important">
 
                   <div class="row form-group mb-5">
                     <div class="col-md-12">
                       <label class="" for="message">Message</label> 
-                      <textarea name="message" id="message" cols="30" rows="7" class="form-control"></textarea>
+                      <textarea name="text" id="message" cols="30" rows="7" class="form-control"></textarea>
                     </div>
                   </div>
 
