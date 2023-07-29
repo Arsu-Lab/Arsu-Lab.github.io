@@ -4,7 +4,7 @@
       "blogFile":"June2023_LLM",
       "date":"June 2023",
       "abs": "Perhaps due to the hype surrounding technologies such as chatGPT, a slight air of mystesysm seems to persist around LLMs, even in technical academic circles. Here we focus on one thread of `practical' LLM publications that continiously improved the state-of-the-art. We focus on identifying common themes across these papers and try to infer underlying charactaristics of these networks.",
-      "img":"June2023_LLM2.png",
+      "img":"June2023_LLM2.webp",
       "tags":[
          "LLM",
          "Introductory Readings"
@@ -15,7 +15,7 @@
       "blogFile":"April2023_Fairness",
       "date":"April 2023",
       "abs": "The field of AI fairness has been exploding, with many conferences adding special tracks and requiring authors make statements regarding the potential social impact of their work. Here we review some philosophical, technical, and practical papers tackling fairness in machine learning applications.",
-      "img":"April2023_Fairness.png",
+      "img":"April2023_Fairness.webp",
       "tags":[
          "Fairness",
          "Introductory Readings"
