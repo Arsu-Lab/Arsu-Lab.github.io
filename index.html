@@ -55,6 +55,7 @@
       blogNav.blogSelected = blogFile
       blogNav.content = './Blog/BlogFiles/'+blogFile
       blogNav.mdText  = ''
+      blogNav.filter_content = ""
       if (blogNav.blogSelected != '') {
         blogContent()
       }
@@ -97,11 +98,12 @@
     createApp({
 
       items: [],
-
+      filter_content:"",
       blogNav,
 
       setBlogPost(blogFile) {
         console.log('at setBlogPost')
+        filter_content = ""
         selectBlog(blogFile)
       },
 
@@ -142,11 +144,6 @@
 
       <div class="main-menu">
         <ul class="js-clone-nav">
-          <!--
-          <li><a href="#section-home" class="nav-link">Home</a></li>
-          <li><a href="#section-photos" class="nav-link">Photos</a></li>
-          <li><a href="#section-testimonial" class="nav-link">Testimonial</a></li>
-          -->
           <li><a href="#section-about" class="nav-link">About</a></li>
           <li><a href="#section-blog" class="nav-link" >Blog</a></li>
           <li><a href="#section-contact" class="nav-link">Contact</a></li>
@@ -159,18 +156,6 @@
       </div>
     </header> 
     <main id="mainPage" class="main-content" data-content="main">
-
-      <!-- section home
-      <section class="site-section-hero bg-image mb-5" style="background-image: url('images/hero-min.jpg');"  data-stellar-background-ratio="0.5" id="section-home">
-        <div class="row justify-content-center align-items-center">
-          <div class="col-md-7 text-center">
-            <h1 class=" heading text-uppercase text-white" data-aos="fade-up">Snap</h1>
-            <p class="lead text-white mb-4" data-aos="fade-up" data-aos-delay="100">A Free Onepage Bootstrap Template by <a href="https://untree.co/">Untree.co</a>. Under licensed <a href="https://untree.co/license/" taget="_blank">Creative Common Attribution 3.0</a></p>
-            <p data-aos="fade-up" data-aos-delay="100"><a href="#section-contact" class="btn btn-primary btn-md smoothscroll">Available for hire</a></p>
-          </div>
-        </div>
-      </section>
-      ---->
       <div v-if="blogNav.blogSelected.length==0" class="container-fluid site-section">
 
         <section class="site-section" id="section-about">
@@ -186,116 +171,13 @@
                 <img src="images/img_1.jpg" alt="Image" class="img-fluid mb-4 w-50 rounded-circle">
                 -->
 
-                <div data-aos="fade-up" data-aos-delay="100" style="font-family:monospace;">
-                  <p>Computational Cognitive Neuroscience / Brain Computer Interfaces / Statistics / Philosophy of Science / Digital Humanities / AI Fairness</p>
-
-                  <!--
-                  <h3 class=" mt-5">Services</h3>
-                  
-                  <div class="d-block d-md-flex mt-5">
-                    <div class="mr-md-auto mr-2">
-                      <ul class="ul-check list-unstyled primary">
-                        <li>Optio eveniet ex laborum</li>
-                        <li>Inventore sapiente tenetur</li>
-                        <li>Ipsam aliquam esse</li>
-                      </ul>
-                    </div>
-                    <div class="mr-md-auto">
-                      <ul class="ul-check list-unstyled primary">
-                        <li>Optio eveniet ex laborum</li>
-                        <li>Inventore sapiente tenetur</li>
-                        <li>Ipsam aliquam esse</li>
-                      </ul>
-                    </div>
-                  </div>
-                  -->
+                <div class="TagNames" data-aos="fade-up" data-aos-delay="100" style="font-family:monospace;">
+                  <p> Computational Cognitive Neuroscience / Brain Computer Interfaces / Statistics / <button class="btn btn-link" @click="filter_content='LLM'"> Large Language Models </button> / Philosophy of Science / Digital Humanities / <button class="btn btn-link" @click="filter_content='AI Fairness'">AI Fairness</button></p>
                 </div>
               </div>
             </div>
           </div>
         </section>
-
-        <!----- Section Testimonial 
-        <section class="site-section" id="section-testimonial">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-md-8 text-center">
-                <h2 class="heading">Testimonial</h2>
-
-                <div class="row justify-content-center">
-                  <div class="col-md-12">
-
-                    <div class="owl-carousel slide-one-item home-slider">
-
-                      <div class="testimony text-center px-md-4">
-                        <figure class="mx-auto d-inline-block">
-                          <img src="images/person_2.jpg" alt="Free Template by Untree.co" class="mx-auto img-fluid w-25 rounded-circle">
-                        </figure>
-                        <p class="text-black"><strong>Jorge Smith</strong></p>
-                        <blockquote>
-                          <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde tenetur quis facilis quam optio voluptate totam placeat, doloremque. Sit repellat ipsum dolor fugit similique itaque maxime saepe ipsam. Velit, harum!&rdquo;</p>
-                        </blockquote>
-                      </div>
-
-                      <div class="testimony text-center px-md-4">
-                        <figure class="mx-auto d-inline-block">
-                          <img src="images/person_3.jpg" alt="Free Template by Untree.co" class="mx-auto img-fluid w-25 rounded-circle">
-                        </figure>
-                        <p class="text-black"><strong>Ben Crawford</strong></p>
-                        <blockquote>
-                          <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde tenetur quis facilis quam optio voluptate totam placeat, doloremque. Sit repellat ipsum dolor fugit similique itaque maxime saepe ipsam. Velit, harum!&rdquo;</p>
-                        </blockquote>
-                      </div>
-
-                      <div class="testimony text-center px-md-4">
-                        <figure class="mx-auto d-inline-block">
-                          <img src="images/person_2.jpg" alt="Free Template by Untree.co" class="mx-auto img-fluid w-25 rounded-circle">
-                        </figure>
-                        <p class="text-black"><strong>Jorge Smith</strong></p>
-                        <blockquote>
-                          <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde tenetur quis facilis quam optio voluptate totam placeat, doloremque. Sit repellat ipsum dolor fugit similique itaque maxime saepe ipsam. Velit, harum!&rdquo;</p>
-                        </blockquote>
-                      </div>
-
-                      <div class="testimony text-center px-md-4">
-                        <figure class="mx-auto d-inline-block">
-                          <img src="images/person_3.jpg" alt="Free Template by Untree.co" class="mx-auto img-fluid w-25 rounded-circle">
-                        </figure>
-                        <p class="text-black"><strong>Ben Crawford</strong></p>
-                        <blockquote>
-                          <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde tenetur quis facilis quam optio voluptate totam placeat, doloremque. Sit repellat ipsum dolor fugit similique itaque maxime saepe ipsam. Velit, harum!&rdquo;</p>
-                        </blockquote>
-                      </div>
-
-                      <div class="testimony text-center px-md-4">
-                        <figure class="mx-auto d-inline-block">
-                          <img src="images/person_2.jpg" alt="Free Template by Untree.co" class="mx-auto img-fluid w-25 rounded-circle">
-                        </figure>
-                        <p class="text-black"><strong>Jorge Smith</strong></p>
-                        <blockquote>
-                          <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde tenetur quis facilis quam optio voluptate totam placeat, doloremque. Sit repellat ipsum dolor fugit similique itaque maxime saepe ipsam. Velit, harum!&rdquo;</p>
-                        </blockquote>
-                      </div>
-
-                      <div class="testimony text-center px-md-4">
-                        <figure class="mx-auto d-inline-block">
-                          <img src="images/person_3.jpg" alt="Free Template by Untree.co" class="mx-auto img-fluid w-25 rounded-circle">
-                        </figure>
-                        <p class="text-black"><strong>Ben Crawford</strong></p>
-                        <blockquote>
-                          <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde tenetur quis facilis quam optio voluptate totam placeat, doloremque. Sit repellat ipsum dolor fugit similique itaque maxime saepe ipsam. Velit, harum!&rdquo;</p>
-                        </blockquote>
-                      </div>
-
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        --->
         <section class="site-section" id="section-blog">
           <div class="container">
             <div class="row justify-content-center">
@@ -306,7 +188,7 @@
                     <div v-if="items.length === 0">Waiting for data...</div>
                     <div v-else>
                       <!--- print blog entry --->
-                      <div v-for="item in items" class="col-md-12 mb-4" data-aos="fade-up">
+                      <div v-for="item in items.filter(e => {return ((e.tags.includes(filter_content)) || (!filter_content)) })" class="col-md-12 mb-4" data-aos="fade-up">
                         <div class="d-md-flex d-block blog-entry align-items-start">
                           <div class="mr-0 mr-md-5 mb-3 img-wrap">
                             <a v-bind:href="'#/blog/' + item.blogFile"><img :src="'./Blog/BlogImg/' + item.img" alt="Image" class="img-fluid mb-0" title="Generated by midJourney" style="object-fit: fill;"></a>
@@ -325,18 +207,6 @@
                       <!--- print blog entry --->
                     </div>
                   </div>
-                  <!--
-                  for pagination  https://codepen.io/tedirghazali/details/qBjbyEB
-                  <div class="col-12 text-center">
-                    <div class="custom-pagination">
-                      <span>1</span>
-                      <a href="#">2</a>
-                      <a href="#">3</a>
-                      <span>...</span>
-                      <a href="#">7</a>
-                    </div>
-                  </div>
-                  -->
                 </div>
               </div>
             </div>

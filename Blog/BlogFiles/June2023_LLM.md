@@ -2,7 +2,7 @@
 
 June 2023, Tags:  LLM, Introductory Reading
 
-![img](./Blog/BlogImg/June2023_LLM2.png)
+<img src="./Blog/BlogImg/June2023_LLM2.webp" style="width:70%;"></img>
 <p class="text-sm-center" style="margin:0em 8em 1em; font-size:0.8em">Image from Midjourney with prompt "tangled guardrails protecting us from Large Language Models in an imaginary city, oil painting in the style of MC Escher --tile --test --creative --upbeta"</p>
 
 
