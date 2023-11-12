@@ -21,7 +21,7 @@ This document might leave the reader in a state of ambivalence. While the emphas
 
 [Fairness Definitions Explained](https://fairware.cs.umass.edu/papers/Verma.pdf) and [Algorithmic Fairness: Choices, Assumptions, and Definitions](https://www.annualreviews.org/doi/abs/10.1146/annurev-statistics-042720-125902) are surveys of the most popular quantifications used to measure fairness.  Before proceeding, one should consider a few points regarding these definitions.
 
-<img src="./Blog/BlogOther/AlgorithmicFairness.png" style="width:70%;"></img>
+<img src="./Blog/BlogOther/AlgorithmicFairness.png" style="width:60%;"></img>
 <p class="text-sm-center" style="margin:0em 8em 1em; font-size:0.8em">From <a href="https://www.annualreviews.org/doi/abs/10.1146/annurev-statistics-042720-125902">Algorithmic Fairness: Choices, Assumptions, and Definitions</a>.</p>
 
 Given a group of people who share a protected characteristic  $g$ and an independent variable $X$ (such as applicant credentials) *conditional statistical parity* is achieved when given the same values for $X$ candidates with and without the protected characteristic have the same chance to get positive outcomes. This is formalized as $p(D=1 | X=x,G=g)=p(D=1|X=x,G=  - g)$. As this is a difficult criterion to satisfy, when there is access to ground truth (such as in the case of COMPAS, simply apply the algorithm to prisoners in other counties) we can instead focus on the predicted outcome $Y$ and real result. For instance we can examine the False Positive Balance between groups $p(D=0|Y=1,G=g)=p(D=0|Y=1,G=-g)$. Other metrics (such as the false negative rate) could similarly be explored.
@@ -30,7 +30,7 @@ Given a group of people who share a protected characteristic  $g$ and an indepen
 
 Given the metrics defined above, a researcher can identify discriminatory algorithms. However, correcting these algorithms may pose a challenge, and  adopting fairer algorithms might encounter pushback if they fall short in other metrics (such as profitability). To overcome this researchers have developed various tools, for instance [Joint Optimization of AI Fairness and Utility](https://arxiv.org/pdf/2002.01621.pdf) uses an analytic hierarchy process to rank different metrics and optimize the model to satisfy the resulting weighted sum of these metrics. The final results are visualized to allow the user to easily identify high utility models that are also relatively fair (see image).   
 
-<img src="./Blog/BlogOther/jointOpt.png" style="width:70%;"></img>
+<img src="./Blog/BlogOther/jointOpt.png" style="width:35%;"></img>
 <p class="text-sm-center" style="margin:0em 8em 1em; font-size:0.8em">From <a href="https://arxiv.org/pdf/2002.01621.pdf">Joint Optimization of AI Fairness and Utility: A
 Human-Centered Approach</a>. The Statistical Parity Difference and Weighted Average Odds Difference (SPD and WAOD, two fairness metrics) are visualized for different algorithms, as well as utility (profit in thousands of dollars).</p>
 
