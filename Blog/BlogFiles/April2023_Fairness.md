@@ -30,7 +30,7 @@ Given a group of people who share a protected characteristic  $g$ and an indepen
 
 Given the metrics defined above, a researcher can identify discriminatory algorithms. However, correcting these algorithms may pose a challenge, and  adopting fairer algorithms might encounter pushback if they fall short in other metrics (such as profitability). To overcome this researchers have developed various tools, for instance [Joint Optimization of AI Fairness and Utility](https://arxiv.org/pdf/2002.01621.pdf) uses an analytic hierarchy process to rank different metrics and optimize the model to satisfy the resulting weighted sum of these metrics. The final results are visualized to allow the user to easily identify high utility models that are also relatively fair (see image).   
 
-<img src="./Blog/BlogOther/AlgorithmicFairness.png" style="width:70%;"></img>
+<img src="./Blog/BlogOther/jointOpt.png" style="width:70%;"></img>
 <p class="text-sm-center" style="margin:0em 8em 1em; font-size:0.8em">From <a href="https://arxiv.org/pdf/2002.01621.pdf">Joint Optimization of AI Fairness and Utility: A
 Human-Centered Approach</a>. The Statistical Parity Difference and Weighted Average Odds Difference (SPD and WAOD, two fairness metrics) are visualized for different algorithms, as well as utility (profit in thousands of dollars).</p>
 
@@ -40,7 +40,7 @@ A different tool [AI Fairness 360](https://arxiv.org/pdf/1810.01943.pdf) enables
 - **Fair in-processing** techniques focus on learning a fair classifier given the original unchanged data. This can be done using multi-objective optimization with fairness as an objective, adversarial debiasing (training an adversary that tries to infer protected attributes from model prediction), or a prejudice remover (a discrimination aware regularizer).
 - **Fair post-processing** assumes you already have a trained biased model. These techniques try to fix the bias using frameworks such as reject option classification (favor/punish points in the model uncertainty boundary depending on the protected attribute) or equalized odds transformation (lear a linear projection of the classifier predicted probabilities to learn outputs that achieve fairness).
 
-<img src="./Blog/BlogOther/AlgorithmicFairness.png" style="width:70%;"></img>
+<img src="/Blog/BlogOther/fairness360.webp" style="width:70%;"></img>
 <p class="text-sm-center" style="margin:0em 8em 1em; font-size:0.8em">From <a href="https://arxiv.org/pdf/1810.01943.pdf">AI Fairness 360</a>. Different frameworks to guarentee algorithmic farirness.</p>
 
 While the above line of research is interesting and useful, AI fairness seems to - at least so far -  have very limited actual applications outside academia. While multiple popular magazines [wrote articles about AI fairness 360](https://www.zdnet.com/article/ibms-new-open-source-tools-help-companies-spot-bias-in-advertising/) I was unable to find a single company that is confirmed to be actively using this tool. Like various academics before us, machine learning researchers seem to begin to acknowledge that when not paired with principled political action theory alone does not go very far. Various articles, such as [Principles alone cannot guarantee ethical AI](https://www.nature.com/articles/s42256-019-0114-4) have began discussing ways for large institutions in the filed (such as IEEE) to regulate the development of algorithms. One can perhaps be hopeful knowing that we are at the very least beginning to have the difficult discussions necessary to bring AI fairness into practice.
