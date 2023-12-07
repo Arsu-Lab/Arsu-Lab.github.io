@@ -609,7 +609,8 @@ h1, h2, h3, h4, h5,
   text-align: left;
   position: fixed;
   left: 0;
-  top: 0; }
+  top: 0;
+  max-width: 400;}
   @media (max-width: 991.98px) {
     .header-bar {
       width: 100%;
