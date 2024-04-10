@@ -2,7 +2,7 @@
 
 April 2023, Tags:  Fairness, Introductory Reading
 
-<img src="./Blog/BlogImg/April2023_Fairness.webp" style="width:70%;"></img>
+<img src="./Blog/BlogImg/April2023_Fairness.webp" style="width:70%; object-fit: contain;"></img>
 <p class="text-sm-center" style="margin:0em 8em 1em; font-size:0.8em">Image from Midjourney with prompt "A man facing the blind justice system"</p>
 
 The field of AI fairness has been exploding, with many conferences adding special tracks and requiring authors make statements regarding the potential social impact of their work. Here we review some philosophical, technical, and practical papers tackling fairness in machine learning applications.
