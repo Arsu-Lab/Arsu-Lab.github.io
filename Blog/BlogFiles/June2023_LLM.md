@@ -2,11 +2,11 @@
 
 June 2023, Tags:  LLM, Introductory Reading
 
-<img src="./Blog/BlogImg/June2023_LLM2.webp" style="width:70%;"></img>
+<img src="./Blog/BlogImg/June2023_LLM2.webp" style="width:70%; object-fit: contain;"></img>
 <p class="text-sm-center" style="margin:0em 8em 1em; font-size:0.8em">Image from Midjourney with prompt "tangled guardrails protecting us from Large Language Models in an imaginary city, oil painting in the style of MC Escher --tile --test --creative --upbeta"</p>
 
 
-Large Language Models (LLMs) have swiftly made their mark in diverse fields, from education to industry and politics. Yet, despite their popularity, LLMs retain an intriguing air of mysticism even within academic circles, . In this exploration, we delve into a selection of research publications that have propelled LLMs to the forefront, shedding light on some technical intricacies and uncovering common threads.
+Large Language Models (LLMs) have swiftly made their mark in diverse fields, from education to industry and politics. Yet, despite their popularity, LLMs retain an intriguing air of mysticism even within academic circles. In this exploration, we delve into a selection of research publications that have propelled LLMs to the forefront, shedding light on some technical intricacies and uncovering common threads.
 
 Discussions of LLMs seem to have a high risk of becoming a disjointed collection of pedantic rants (For instance, the merits of rotary versus relative positional encoding alone can consume [an engaging blog post](https://blog.eleuther.ai/rotary-embeddings/)). Therefore, it is prudent to occasionally sidestep these technical aspects to instead focus on *meta* questions: What do the chosen evaluation metrics reveal about the research community's priorities? Can we glean insights into future research directions?
 
@@ -77,7 +77,7 @@ One interesting option is combining the best of both worlds by defining the spec
 ## Final Musings
 ### Panik?  <img src="./assets/panik.png" style="height:2em;display:inline"></img>
 
-I find SciFi novels often candidly reflect many aspects of the authors' (and by extension a larger community) psyche. Paradoxically, this makes SciFi a terrible guide to anyoe looking for potential misuses of LLMs. Afterall, the world of publishing remains exlusive and political. While a lot of media attention focuses on SkyNet and singularity scenarios, the real impact of LLMs will probably be first felt by smaller communities online and in the global south. Fake news have plagued gubernatorial elections in Indonesia since at least 2014, and have arguably profoundly influenced politics in the 4th most populated country in the world. Nowadays anyone with a commercial laptop can spin up an army of fake profiles and use LLMs push specific political views, or conduct astroturfing on a massive scale.
+I find SciFi novels often candidly reflect many aspects the author (and his society's) psyche. Paradoxically, this makes SciFi have a very narrow imagination when it comes to potential misuses of technology. Afterall, the world of publishing remains exlusive and political, and while media attention focuses on SkyNet and singularity scenarios, the real impact of LLMs will probably be first felt by smaller communities online and in the global south. For instance, fake news have plagued gubernatorial elections in Indonesia since at least 2014, and have arguably profoundly influenced politics in the 4th most populated country in the world. Nowadays anyone with a commercial laptop can spin up an army of fake profiles and use LLMs push specific political views, or conduct astroturfing on a massive scale.
 
 While regulatory measures are imperative, effectively enforcing them remains a considerable challenge. Fortunately, the field of research dedicated to employing [LLMs for fact-checking](https://arxiv.org/abs/2210.08726)  purposes is already active and holds promise.
 
@@ -92,7 +92,7 @@ LLMs are already being used to automate lead generation and sales. Studying thes
 #### Footnotes
 <p style="font-size:0.8em">
 <ol>
-<li> This is especially an worrying as if, for instance, a facial recognition system places you in the crosshairs of a police investigation your lawyer can not ask for a suppression hearing, and there is no opportunity for cross examination.</li>
+<li> This is especially worrying. For instance, if a facial recognition system places you in the crosshairs of a police investigation your lawyer can not ask for a suppression hearing, and there is no opportunity for cross examination.</li>
 <li> The document does specify however that traditional "terms of service" are inadequate and that users are entitled to transparent and easy mechanisms to control how their data is used.</li>
 </ol>
 </p>
