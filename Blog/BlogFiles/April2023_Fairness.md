@@ -1,4 +1,4 @@
-# Introductory Reading on AI Fairness
+# AI Fairness In The Wild
 
 April 2024, Tags:  Fairness, Introductory Reading
 
