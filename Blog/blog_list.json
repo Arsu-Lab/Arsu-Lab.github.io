@@ -13,7 +13,7 @@
    {
       "name":"Introductory Readings in AI Fairness",
       "blogFile":"April2023_Fairness",
-      "date":"April 2023",
+      "date":"November 2024",
       "abs": "The field of AI fairness has been exploding, with many conferences adding special tracks and requiring authors make statements regarding the potential social impact of their work. Here we review some philosophical, technical, and practical papers tackling fairness in machine learning applications.",
       "img":"April2023_Fairness.webp",
       "tags":[
