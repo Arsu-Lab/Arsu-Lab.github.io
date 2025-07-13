@@ -1,6 +1,6 @@
 [
    {
-      "name":"Shortcut Learning In The Age of Transformers",
+      "name":"Shortcut Learning In Medical Diagnostics",
       "blogFile":"January2025_Shortcuts",
       "date":"January 2025",
       "abs": "`Neural Networks are a black box': train a classification model with labeled images of vehicles and it would start to rely on the presence of water and clouds to classify boats and planes. This reliance on correlated spurious features is an example of Shortcut Learning, an active area of research that touches upon Fairness in ML, explainability, and multi-modality.",
