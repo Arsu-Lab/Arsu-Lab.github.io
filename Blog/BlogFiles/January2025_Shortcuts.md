@@ -3,9 +3,9 @@
 January 2025, Tags:  Introductory Reading, AI Fairness, Interpretability
 
 <img src="./Blog/BlogImg/January2025_Shortcuts.webp" style="width:70%; object-fit: contain;"></img>
-<p class="text-sm-center" style="margin:0em 8em 1em; font-size:0.8em;text-align:center;"">Midjourney generated image. Prompt "dangerous shortcut photorealistic"</p>
+<p class="text-sm-center" style="margin:0em 8em 1em; font-size:0.8em;text-align:center;"">Midjourney generated image. Prompt "Bias in AI"</p>
 
-Any machine learning practitioner has heard the adage `Neural Networks are a black box' repeatedly since their first *Intro to AI* course; train a classification model with labeled images of vehicles and it would start to rely on the presence of water and clouds to classify boats and planes. This reliance on simple correlated spurious features is an example of *Shortcut Learning*, and is an active area of research that touches upon Fairness in ML, explainability, and multi-modality.
+Any machine learning practitioner has heard the adage `Neural Networks are a black box' repeatedly since their first *Intro to AI* course; train a classification model with labeled images of vehicles and it would start to rely on the presence of water and clouds to classify boats and planes. This reliance on simple correlated spurious features is an example of *Shortcut Learning*, and is an active area of research that touches upon Fairness in ML, explainability, and multi-modality. Here we review some recently developed approaches for shortcut mitigation, and discuss their applicability for medical diagnostics tasks.
 
 One interesting sidenote: recent research have demonstrated that while shortcut learning can still be found in [Transformers](https://arxiv.org/abs/2501.00942), these models are [immune to many of the shortcuts](https://arxiv.org/abs/2203.09125) that plague convolution based neural networks. The exact reason behind this remains a mystery, but it seems like the global nature of the attention mechanism in Transformers is the likely culprit. Here we will put aside the distinction between the architectures, instead we encourage the interested reader consults the two aforementioned works before diving into shortcut learning research.
 
