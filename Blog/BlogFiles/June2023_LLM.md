@@ -56,7 +56,7 @@ While examining the functional capacities of LLMs it is vital to set aside abstr
 
 As tempting as it might be to go down the rabbit-hole of Hume-an definition of causality, and argue that human reasoning is also mere correlation. The fact remains that these results show a clear shortcoming of LLMs. Some researchers have argued that [emergent abilities](https://github.com/Mooler0410/LLMsPracticalGuid) such as specific types of reasoning can suddenly appear once the model complexity reaches a certain level. However, formalizing a research programme based on these theories is difficult, and accepting these limitations remains the most pragmatic moves. 
 
-Overall, LLMs seem to be highly capable of performing many common tasks (today, an LLM assists most of my writing). Personally, I find a responsive free copy-editor more useful than a hypothetical 
+Overall, LLMs seem to be highly capable of performing many common tasks (today, an LLM assists most of my writing). Personally, I find a responsive free copy-editor more useful than a hypothetical research assitant - I like to do research, and probably won't use an LLM even if I could. 
 
 ## Where do we go from here?
 
@@ -69,7 +69,7 @@ Secondly, while LLMs are undeniably powerful tools, their true potential shines 
 <img src="./Blog/BlogFiles/June2023_LLM/decisionTree.png" style="width:70%;"></img>
 <p class="text-sm-center" style="margin:0em 8em 1em; font-size:0.8em;">When should one use LLMs? From  <a href="https://github.com/Mooler0410/LLMsPracticalGuide">(Yang et al 2023).</a></p>
 
-One interesting option is combining the best of both worlds by defining the specialized models as tools that the LLM can invoke when necessary. [HuggingGPT](https://huggingface.co/spaces/microsoft/HuggingGPT) and [Gorrilla](https://gorilla.cs.berkeley.edu/) demonstrate how useful these tools can be for completing complex multi-modal tasks. Access to search engines can help alleviate  
+One interesting option is combining the best of both worlds by defining the specialized models as tools that the LLM can invoke when necessary. [HuggingGPT](https://huggingface.co/spaces/microsoft/HuggingGPT) and [Gorrilla](https://gorilla.cs.berkeley.edu/) demonstrate how useful these tools can be for completing complex multi-modal tasks. And access to search engines can help alleviate the issues of model hallucinations. This *Agenet*-inc approach uses one LLM to produce a plan and other LLMs / models to excute each step.
   
 <img src="./Blog/BlogFiles/June2023_LLM/HuggingGPT.png" style="width:70%;"></img>
 <p class="text-sm-center" style="margin:0em 8em 1em; font-size:0.8em;"> Integrating the 53 most popular huggingFace APIs into ChatGPT. From  <a href="https://huggingface.co/spaces/microsoft/HuggingGPT">HuggingGPT</a>.</p>
