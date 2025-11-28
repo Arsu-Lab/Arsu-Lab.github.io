@@ -1,12 +1,12 @@
 # ICCV 2025 Digest
 
-November 2025, Tags: Large Language Models
+November 2025, Tags: misc
 
 Last month I had the pleasure of attending the 2025 International Conference on Computer Vision (ICCV) in Hawaii. After taking a month to digest the experience, and catch up on some deadlines, I decided that for posterity's sake, it might be useful to write down a few observations on the state of AI in 2025.
 
 ## i. We Now Live in a Multipolar ML Landscape
 
-For the first time since ICCV started running back in 1987, the majority of authors were from institutions based in China (50.8% without Hong Kong which adds another 2.5%). The USA (17.2%) was a (not so close) second, followed by Korea, Germany, Great Britain (and no other European country cracking the top 15).
+For the first time since ICCV started running back in 1987, the majority of authors were from institutions based in China (50.8% without Hong Kong which would add another 2.5%). The USA (17.2%) was a (not so close) second, followed by Korea, Germany, and Great Britain (with no other European country cracking the top 15).
 
 
 <img src="./Blog/BlogOther/ICCV_countries.webp" style="width:60%;"></img>
