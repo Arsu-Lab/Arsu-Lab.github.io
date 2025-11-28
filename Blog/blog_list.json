@@ -1,5 +1,15 @@
 [
    {
+      "name":"ICCV 2025 Digest",
+      "blogFile":"Nov2025_ICCV",
+      "date":"November 2025",
+      "abs": "Last month I had the pleasure of attending the 2025 International Conference on Computer Vision (ICCV) in Hawaii. After taking a month to digest the experience, and catch up on some deadlines, I decided that for posterity's sake, it might be useful to write down a few observations on the state of AI in 2025.",
+      "img":"Nov2025_ICCV.webp",
+      "tags":[
+         "misc"
+      ]
+   },
+   {
       "name":"Shortcut Learning In Medical Diagnostics",
       "blogFile":"January2025_Shortcuts",
       "date":"January 2025",
