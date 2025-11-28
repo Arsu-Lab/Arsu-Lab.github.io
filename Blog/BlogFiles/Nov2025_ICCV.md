@@ -9,7 +9,7 @@ Last month I had the pleasure of attending the 2025 International Conference on 
 For the first time since ICCV started running back in 1987, the majority of authors were from institutions based in China (50.8% without Hong Kong which adds another 2.5%). The USA (17.2%) was a (not so close) second, followed by Korea, Germany, Great Britain (and no other European country cracking the top 15).
 
 
-[comment]: <> (![image](../BlogOther/ICCV_countries.webp))
+![image](../BlogOther/ICCV_countries.webp)
 
 Moreover, most of the companies that had booths were Chinese companies with branches in San Francisco. This might be unsurprising considering DeepSeek, Kimi K2, and other open source LLMs from Chinese institutions are currently dominating every benchmark. However, one could have expected to see more serious setbacks considering the 2022 CHIPS act and Trump's "China Initiative". Regardless, with the new reality of Chinese dominance in AI we are likely to see the continued unfortunate escalation of isolationist policies. Europe seems to be scrambling to shore up its meager AI ecosystem through "[The 28th Regime](https://www.europarl.europa.eu/committees/en/the-28th-regime-a-new-legal-framework-fo/product-details/20250603WKS06401)", which would act as a single legal framework that companies need to adhere to (no more country specific regulation or employment rules). But it is unlikely these efforts will bear fruit before the 2030s at the earliest.
 
@@ -21,7 +21,7 @@ Many of the papers (not going to point fingers) could be summarized with *"We mo
 
 Many of the workshops, company booths, and papers focused on Egocentric computer vision and AI for robotics. If there is a new frontier forming robotics might be it. However, instead of an [embodied android](https://en.wikipedia.org/wiki/After_Yang) with a local AI and a memory bank recording shared experiences we will probably get a subscription model with constant API calls to a foundational model / remote operator.
 
-[comment]: <> (![image](../BlogOther/ICCV_clanker.webp))
+![image](../BlogOther/ICCV_clankers.webp)
 
 ## v. The Highlights
 
