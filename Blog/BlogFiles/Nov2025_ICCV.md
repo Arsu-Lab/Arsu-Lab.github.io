@@ -19,7 +19,7 @@ Many of the papers (not going to point fingers) could be summarized with *"We mo
 
 ## iv. The Clankers are Coming
 
-Many of the workshops, company booths, and papers focused on Egocentric computer vision and AI for robotics. If there is a new frontier forming robotics might be it. However, instead of an [embodied android](https://en.wikipedia.org/wiki/After_Yang) with a local AI and a memory bank recording shared experiences we will probably get a subscription model with constant API calls to a foundational model / remote operator.
+Many of the workshops, company booths, and papers focused on Egocentric computer vision and AI for robotics. If there is a new frontier forming, robotics might be it! However, instead of an [embodied android](https://en.wikipedia.org/wiki/After_Yang) with a local AI / memory bank learning from unique experiences we seem to be headed towards a subscription model with constant API calls to a foundational model / remote operator.
 
 
 <img src="./Blog/BlogOther/ICCV_clankers.webp" style="width:60%;"></img>
