@@ -11,7 +11,7 @@ For the first time since ICCV started running back in 1987, the majority of auth
 
 <img src="./Blog/BlogOther/ICCV_countries.webp" style="width:60%;"></img>
 
-Moreover, most of the companies that had booths were Chinese companies with branches in San Francisco. Though this might seem unsurprising considering DeepSeek, Kimi K2, and other open source LLMs from Chinese institutions are currently dominating every LLM benchmark, personally I did expect policies such as Biden's 2022 CHIPS act and Trump's "China Initiative" to pose bigger setbacks. Regardless, with the new reality of  a multipolar AI landscape we are likely to see the continued unfortunate escalation of isolationist policies, making scientific collaboration increasingly difficult, and new adding bureaucratic hurdles. US and China aside, Europe seems to be scrambling to shore up its meager AI ecosystem through "[The 28th Regime](https://www.europarl.europa.eu/committees/en/the-28th-regime-a-new-legal-framework-fo/product-details/20250603WKS06401)", which would act as a single legal framework for all EU countries (no more country specific regulation or employment rules). But it is unlikely these efforts will bear fruit before the 2030s at the earliest.
+Moreover, most of the companies that had booths were Chinese companies with branches in San Francisco. Though this might seem unsurprising considering DeepSeek, Kimi K2, and other open source LLMs from Chinese institutions are currently dominating every LLM benchmark, personally I did expect policies such as Biden's 2022 CHIPS act and Trump's "China Initiative" to pose bigger setbacks. Regardless, with the new reality of  a multipolar AI landscape we are likely to see the continued unfortunate escalation of isolationist policies, making scientific collaboration increasingly difficult, and adding new bureaucratic hurdles<sup>1</sup>. US and China aside, Europe seems to be scrambling to shore up its meager AI ecosystem through "[The 28th Regime](https://www.europarl.europa.eu/committees/en/the-28th-regime-a-new-legal-framework-fo/product-details/20250603WKS06401)", which would act as a single legal framework for all EU countries (no more country specific regulation or employment rules). But it is unlikely these efforts will bear fruit before the 2030s at the earliest.
 
 ## iii. Rolling Stones
 
@@ -44,8 +44,15 @@ In a related paper from Apple titled [*Scaling Laws for Native Multimodal Models
 
 Serendipitously, I wandered into the *Biometrics for Art Workshop* on the second day. While all speakers presented interesting work, I particularly enjoyed a presentation by emeritus Prof Rick Johnson. Johnson taught at Cornell for forty years, with a five year hiatus beginning in 2007 during which he held an appointment at the Van Gogh Museum in Amsterdam. Since returning from the Netherlands, Johnson established a computational art history program at Cornell, pioneering many computational methods for art provenance analysis, before retiring in 2021 and moving to Hawaii. Prof Johnson shared many insights into biometrics applications in art, but also on successfully collaborating with people from diverse backgrounds. I highly recommend [watching his presentation](https://youtu.be/PguLFIyYKN4?si=7fWQ1tr4f4jyNyjr&t=3413).
 
+<iframe width="420" height="315" src="https://youtu.be/PguLFIyYKN4?si=7fWQ1tr4f4jyNyjr&t=3413">
+</iframe>
 
-
+### Footnotes
+<p style="font-size:0.8em">
+<ol>
+<li>If you are interested in the geopolitical implications of the AI competition, Benjamin Bratton's idea of [The stack](https://en.wikipedia.org/wiki/The_stack_(philosophy)) is a useful framework.</li>
+</ol>
+</p>
 
 
 
