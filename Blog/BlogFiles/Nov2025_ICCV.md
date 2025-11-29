@@ -44,9 +44,6 @@ In a related paper from Apple titled [*Scaling Laws for Native Multimodal Models
 
 Serendipitously, I wandered into the *Biometrics for Art Workshop* on the second day. While all speakers presented interesting work, I particularly enjoyed a presentation by emeritus Prof Rick Johnson. Johnson taught at Cornell for forty years, with a five year hiatus beginning in 2007 during which he held an appointment at the Van Gogh Museum in Amsterdam. Since returning from the Netherlands, Johnson established a computational art history program at Cornell, pioneering many computational methods for art provenance analysis, before retiring in 2021 and moving to Hawaii. Prof Johnson shared many insights into biometrics applications in art, but also on successfully collaborating with people from diverse backgrounds. I highly recommend [watching his presentation](https://youtu.be/PguLFIyYKN4?si=7fWQ1tr4f4jyNyjr&t=3413).
 
-<iframe width="420" height="315" src="https://youtu.be/PguLFIyYKN4?si=7fWQ1tr4f4jyNyjr&t=3413">
-</iframe>
-
 ### Footnotes
 <p style="font-size:0.8em">
 <ol>
