@@ -163,7 +163,7 @@
 	};
 	siteMagnificPopup();
 
-
+ /*
 	var siteCarousel = function () {
 		if ( $('.nonloop-block-13').length > 0 ) {
 			$('.nonloop-block-13').owlCarousel({
@@ -211,7 +211,7 @@
 			navText: ['<span class="icon-keyboard_arrow_left">', '<span class="icon-keyboard_arrow_right">']
 		});
 	};
-	siteCarousel();
+	siteCarousel();*/
 
 	var siteStellar = function() {
 		$(window).stellar({
