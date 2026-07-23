@@ -1,0 +1,346 @@
+<!-- /*
+* Template Name: Snap
+* Template Author: Untree.co
+* Tempalte URI: https://untree.co/
+* License: https://creativecommons.org/licenses/by/3.0/
+*/ -->
+<!doctype html>
+<html lang="en">
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <!-- need these to render latex -->
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" integrity="sha384-GvrOXuhMATgEsSwCs4smul74iXGOixntILdUW9XmUC6+HX0sLNAK3q71HotJqlAn" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/marked-katex-extension@5.1.3/lib/index.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked-katex-extension/lib/index.umd.js"></script>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="28e081c1-02af-4dec-8ce2-ed56d12f586b"></script>
+  <!--------------------------------->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Untree.co">
+  <link rel="shortcut icon" href="favicon.png">
+
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  
+
+  <link href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700,900|Oswald:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <!--
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+  -->
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/fancybox.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+
+<title> The Arsu Lab Blog</title>
+
+
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/director@1.2.8/build/director.min.js"></script>
+  <script type="module">
+    import { createApp, reactive } from 'https://unpkg.com/petite-vue?module'
+    //import { marked } from 'https://cdn.jsdelivr.net/npm/marked/marked.min.js';
+    //import { markedKatex } from 'https://cdn.jsdelivr.net/npm/marked-katex-extension/dist/marked-katex.min.js';
+
+    
+    // Enable the KaTeX extension for marked
+    marked.use(markedKatex({ throwOnError: false }));
+    
+    /////////////////////////////////
+    // Reactive blog logic
+    const blogNav = reactive({
+      blogSelected:'',
+      content:'',
+      mdText:''
+    });
+
+    function selectBlog(blogFile) {
+      console.log(blogFile)
+      blogNav.blogSelected = blogFile
+      blogNav.content = './Blog/BlogFiles/'+blogFile
+      blogNav.mdText  = ''
+      blogNav.filter_content = ""
+      if (blogNav.blogSelected != '') {
+        blogContent()
+      }
+    }
+
+    function blogContent() {
+      console.log('at blog content')
+      console.log(blogNav.content)
+      fetch(blogNav.content)
+        .then(response => response.text())
+        .then(data => blogNav.content = marked.parse(data))
+      console.log('md Text')    
+    }
+
+    /////////////////////////////////
+    // Route handeling code
+    var viewBlog = function (blogId) {
+      console.log("viewBook: bookId is populated: " + blogId);
+      selectBlog(blogId+'.md');
+    };
+    var backToMain = function () {
+      console.log('at backToMain')
+      selectBlog('');
+    };
+
+    var routes = {
+      '/blog/:blogId': viewBlog,
+      'section-about': backToMain,
+      'section-blog': backToMain,
+      'section-contact': backToMain
+    };
+
+    var router = Router(routes);
+
+    router.init();
+
+    /////////////////////////////////
+    // Blog list code
+    const jsonDataUrl = './Blog/blog_list.json'
+    createApp({
+
+      items: [],
+      filter_content:"",
+      section_filter:"blog",
+      blogNav,
+      selectBlog,
+      page: 0,          // 0 = first 3 posts, 1 = next 3, etc.
+      pageSize: 3,
+
+      setBlogPost(blogFile) {
+        console.log('at setBlogPost')
+        filter_content = ""
+        selectBlog(blogFile)
+      },
+
+      mounted() {
+        fetch(jsonDataUrl)
+          .then(response => response.json())
+          .then(data => this.items = data)
+      }
+
+    }).mount('#siteWrap')
+
+  </script>
+  <div id="siteWrap" class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <header class="header-bar d-none d-lg-block align-items-center site-navbar-target hidden-sm hidden-xs">
+      <!--
+      data-aos="fade-right"
+      <div class="site-logo">
+        <a href="index.html">ARSU</a>
+      </div>
+      -->
+      <div class="site-logo text-center">
+        <a href="index.html">
+          <img src="./assets/arsu_v2.webp" class="img-fluid">
+          <b>ARSU LAB</b>
+        </a>
+      </div>
+
+      <div class="d-inline-block d-lg-none ml-md-0 ml-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle "><span class="icon-menu h3"></span></a></div>
+
+      <div class="main-menu">
+        <ul class="js-clone-nav">
+          <li><a href="index.html#section-research" class="nav-link">About</a></li>
+          <li><a href="#section-blog" class="nav-link" :class="{ active: section_filter === 'blog' }" @click="selectBlog(''); section_filter='blog'">Blog</a></li>
+          <li><a href="index.html#section-contact" class="nav-link">Contact</a></li>
+        </ul>
+        <ul class="social js-clone-nav">
+          <li><a href="https://github.com/Arsu-Lab"><i class="fa-brands fa-github" style="font-size:1.3rem"></i></a></li>
+          <li><a href="https://calendly.com/sari-sadiya/30min"><i class="fa-solid fa-calendar-days" style="font-size:1.3rem"></i></a></li>
+          <li><a href="#"><i class="fa-solid fa-envelope"  style="font-size:1.3rem"></i></a></li>
+        </ul>
+      </div>
+    </header> 
+    <main id="mainPage" class="main-content" data-content="main">
+      <div v-if="blogNav.blogSelected.length==0" class="container-fluid site-section">
+
+        <section class="site-section" id="section-about">
+          <div class="container">
+            <div class="row justify-content-center">
+
+              <div class="col-md-12">
+
+                <h1 class="heading" style="display:inline; font-size:4rem;">Arsu Lab</h1><span style="font-size:50%;font-family:monospace;">... Machine Learning with a little extra!</span>
+                <br>
+                <br>
+                <!--
+                <img src="images/img_1.jpg" alt="Image" class="img-fluid mb-4 w-50 rounded-circle">
+                -->
+
+                <div class="TagNames" data-aos="fade-up" data-aos-delay="100" style="font-family:monospace;">
+                  <p> Computational Cognitive Neuroscience / Brain Computer Interfaces / Statistics / <button class="btn btn-link" @click="filter_content='LLM'; page=0"> Large Language Models </button> / Philosophy of Science / Digital Humanities / <button class="btn btn-link" @click="filter_content='AI Fairness'; page=0">AI Fairness</button> / <button class="btn btn-link" @click="filter_content='Alignment'; page=0">Alignment</button></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- <hr class="section-divider"> -->
+        <section class="site-section" id="section-blog">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-md-12">
+                <div class="row">
+                  <h2 class="heading" style="margin-bottom:0" data-aos="fade-up">Blog Posts</h2>                  
+                  <div id="app" @vue:mounted="mounted">
+                    <p>
+                      <button class="btn btn-link" @click="filter_content=''; page=0">All</button> / 
+                      <button class="btn btn-link" @click="filter_content='2023'; page=0">2023</button> / 
+                      <button class="btn btn-link" @click="filter_content='2024'; page=0">2024</button> /
+                      <button class="btn btn-link" @click="filter_content='2025'; page=0">2025</button>
+                    </p>
+                    <div v-if="items.length === 0">Waiting for data...</div>
+                    <div v-else>
+                      <!--- print blog entry --->
+                      <div v-for="item in items.filter(e => {return ((e.tags.concat(e.date.replace(/[^0-9.]/g, ''))
+                        .includes(filter_content)) || (!filter_content)) })
+                        .slice(page * pageSize, page * pageSize + pageSize)" class="col-md-12 mb-4" data-aos="fade-up">
+                        <div class="d-md-flex d-block blog-entry align-items-start">
+                          <div class="mr-0 mr-md-5 mb-3 img-wrap">
+                            <a v-bind:href="'#/blog/' + item.blogFile"><img :src="'./Blog/BlogImg/' + item.img" alt="Image" class="img-fluid mb-0" title="Generated by midJourney" style="object-fit: fill;"></a>
+                          </div>
+                          <div>
+                            <h2 class="mt-0 mb-2"><a v-bind:href="'#/blog/' + item.blogFile">{{ item.name }}</a></h2>
+                            <div class="meta mb-3">Posted on <a href="#">{{ item.date }}</a></div>
+                            <p>{{item.abs}}</p>
+                            Tags:  
+                            <span v-for="(tag, index) in item.tags">
+                                <button class="btn btn-link" @click="filter_content=tag; page=0">{{tag}}</button><span v-if="index+1 <item.tags.length">, </span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <!--- print blog entry --->
+                      <button class="btn btn-link" @click="page--" :disabled="page === 0">&#x2190; Newer Posts</button> / 
+                      <button class="btn btn-link" @click="page++" :disabled="(page+1)*pageSize >= items.filter(e => (e.tags.concat(e.date.replace(/[^0-9]/g,'')).includes(filter_content) || !filter_content)).length">Older Posts &#x2192;</button>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--
+        <section class="site-section" id="section-contact">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-md-12">
+                <h2 class=" mb-5 heading">Contact</h2>
+
+                <form action="https://getform.io/f/e7904191-fc83-4e29-bf7c-3af8bc04848c" method="POST">
+
+
+
+                  <div class="row form-group">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                      <label class="">First and Last Name</label>
+                      <input type="text" id="name" class="form-control">
+                    </div>
+
+                    <div class="col-md-6 mb-3 mb-md-0">
+                      <label class="">Email</label> 
+                      <input type="email" id="email" class="form-control">
+                    </div>
+                  </div>
+
+                  <input type="hidden" name="_gotcha" style="display:none !important">
+
+                  <div class="row form-group mb-5">
+                    <div class="col-md-12">
+                      <label class="" for="message">Message</label> 
+                      <textarea name="text" id="message" cols="30" rows="7" class="form-control"></textarea>
+                    </div>
+                  </div>
+
+                  <div class="row form-group">
+                    <div class="col-md-12">
+                      <input type="submit" value="Send Message" class="btn btn-primary btn-md">
+                    </div>
+                  </div>
+
+
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+        -->
+
+        <div class="row justify-content-center">
+          <div class="col-md-12 text-center py-5">
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a> licensed under the <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+          </div>
+        </div>
+      </div>
+
+      <!---- BLOG POST Section -->
+      <div v-else class="container-fluid site-section">
+          <section class="site-section" id="section-about">
+            <div class="blogPost container">
+              <div class="row justify-content-center">
+                <div v-html="blogNav.content" class="col-md-12">
+                </div>
+              </div>
+            </div>
+          </section>
+        <div class="row justify-content-center">
+          <div class="col-md-12 text-center py-5">
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a> licensed under the <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+    </main>
+
+  </div> <!-- .site-wrap -->
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <!--
+  <script src="js/owl.carousel.min.js"></script>
+  -->
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/lozad.min.js"></script>
+
+  <script src="js/jquery.fancybox.min.js"></script>
+
+  <script src="js/main.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+  </body>
+</html>
