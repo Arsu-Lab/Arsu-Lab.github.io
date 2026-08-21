@@ -1,5 +1,16 @@
 [
    {
+      "name":"Learning Before the Task: Pre-Train Your Model",
+      "blogFile":"Aug2026_Unsup",
+      "date":"August 2026",
+      "abs": "Pre-training are an important development in modern AI, allowing models to learn powerful representations from massive amounts of unlabeled data before task-specific fine-tuning. From SimCLR and MAE to DINOv3, the field has steadily shifted toward building general-purpose representations first instead of relying on expensive task-specific training.",
+      "img":"Aug2026_PreTrain.webp",
+      "tags":[
+         "misc",
+         "Introductory Readings"
+      ]
+   },
+   {
       "name":"ICCV 2025 Digest",
       "blogFile":"Nov2025_ICCV",
       "date":"November 2025",
