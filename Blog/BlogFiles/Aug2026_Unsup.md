@@ -6,6 +6,9 @@ Author: Nicolas Miarka
 
 The past decade has shown tremendous improvements in AI applications across the board. Whether it is generative AI that creates social media content, an analytical model that detects cancer in X-rays faster and more reliably than any human expert, or the mass surveillance and automated facial recognition we see in the United States with Palantir: Artificial Intelligence is dictating many aspects of our lives. In spite of the fact that many people have only heard of Artificial Intelligence with the release of ChatGPT in late 2022, the field of Machine Learning has existed for decades. So why have we only recently achieved such fundamental breakthroughs and improvements across so many domains? The answer might lie in the **P** of GPT: *Pre-Training*, a crucial step in the modern model training pipeline.
 
+<img src="./Blog/BlogImg/Aug2026_PreTrain.webp" style="width:70%; object-fit: contain;"></img>
+<p class="text-sm-center" style="margin:0em 8em 1em; font-size:0.8em">Image from Midjourney with prompt "unsupervised learning as a single dandelion"</p>
+
 In 2012, AlexNet won the ImageNet challenge by a landslide. Shortly after, researchers realized that the weights learned by AlexNet could be transferred to other tasks, establishing supervised pre-training and fine-tuning as the new industry standard. While supervised pre-training and fine-tuning became the go-to for many models, it came at a particular cost. Labeled data is expensive and not always readily available. In 2018, NLP made a gigantic leap with the introduction of self-supervised pre-training. Models like BERT were trained by masking words in articles and text and guessing what was missing. With this training regime, no human labeling is needed, drastically reducing the cost of getting the data, allowing the models to pre-train on the entirety of the Internet.
 
 ## Same Idea, Different Domain
